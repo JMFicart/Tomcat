@@ -33,12 +33,14 @@ public class MagasinServlet extends HttpServlet{
 
         listemagasin.forEach(magasin -> {
             out.print("<li>");
-            out.print(magasin.getNom());
+            out.print(magasin.getUniqueid() + " - " + magasin.getNom());
             out.println("</li>\n");
         });
 
         out.println("</ul>\n" +
-                "<a href=\"" + req.getContextPath() + "/magasin/add\">Ajout magasin</a>\n" +
+                "<a href=\"" + req.getContextPath() + "/magasin/add\">Ajout magasin</a>   " +
+                "<a href=\"" + req.getContextPath() + "/magasin/detail\">Détail magasin</a>    " +
+                "<a href=\"" + req.getContextPath() + "\">Retour menu général</a>\n" +
                 "</body>\n" +
                 "</html>");
     }

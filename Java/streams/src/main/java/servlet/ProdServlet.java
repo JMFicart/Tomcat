@@ -34,10 +34,12 @@ public class ProdServlet extends HttpServlet {
 
         liste.forEach(produit -> {
                     out.print("<li>");
+                    out.print(produit.getId());
+                    out.print("  ");
                     out.print(produit.getNom());
-                    out.print(' ');
+                    out.print("  ");
                     out.print(produit.getMarque());
-                    out.print(' ');
+                    out.print("  ");
                     out.print(produit.getPrix());
                     out.println("</li>\n");
                 });
@@ -45,7 +47,9 @@ public class ProdServlet extends HttpServlet {
         out.println("</ul>\n" +
                 "<a href=\"" + req.getContextPath() + "/produit/add\">Ajout</a>\n" +
                 "<a href=\"" + req.getContextPath() + "/produit/update\">Update</a>\n" +
+                "<a href=\"" + req.getContextPath() + "\">Retour menu général</a>\n" +
                 "</body>\n" +
                 "</html>");
     }
 }
+

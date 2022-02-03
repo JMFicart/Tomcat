@@ -30,12 +30,14 @@ public class UpdateProduitServlet extends HttpServlet {
                 "    <title>Mise à jour de produit</title>\n" +
                 "</head>\n" +
                 "<body>\n" +
+                "    <h1>Formulaire de modification d'un produit</h1>\n" +
                 "    <form action = \"" + req.getContextPath() + "/produit/update\" method=\"post\">\n" +
                 "        <input type=\"\"text\" name=\"id\" placeholder=\"id\"><br>\n" +
                 "        <input type=\"\"text\" name=\"nom\" placeholder=\"nom\"><br>\n" +
                 "        <input type=\"\"text\" name=\"prix\" placeholder=\"prix\"><br>\n" +
                 "        <button type= \"submit\">Envoyer</button>\n" +
                 "    </form>\n" +
+                "<a href=\"" + req.getContextPath() + "/produit\">Retour menu produit</a>\n" +
                 "</body>\n" +
                 "</html>");
     }

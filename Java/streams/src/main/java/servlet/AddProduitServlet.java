@@ -28,6 +28,7 @@ public class AddProduitServlet extends HttpServlet {
                 "    <title>Ajout de produit</title>\n" +
                 "</head>\n" +
                 "<body>\n" +
+                "    <h1>Formulaire d'ajout de produit</h1>\n" +
                 "    <form action = \"" + req.getContextPath() + "/produit/add\" method=\"post\">\n" +
                 "        <input type=\"\"text\" name=\"id\" placeholder=\"id\"><br>\n" +
                 "        <input type=\"\"text\" name=\"nom\" placeholder=\"nom\"><br>\n" +
@@ -35,6 +36,7 @@ public class AddProduitServlet extends HttpServlet {
                 "        <input type=\"\"number\" name=\"prix\" placeholder=\"prix\"><br>\n" +
                 "        <button type= \"submit\">Envoyer</button>\n" +
                 "    </form>\n" +
+                "<a href=\"" + req.getContextPath() + "/produit\">Retour menu produit</a>\n" +
                 "</body>\n" +
                 "</html>");
     }
